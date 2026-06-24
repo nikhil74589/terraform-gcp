@@ -1,8 +1,7 @@
 FROM nginx:alpine
-
 COPY index.html /usr/share/nginx/html/index.html
-COPY default.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 8080
-
-CMD ["nginx", "-g", "daemon off;"]
+RUN sed -i 's/listen 80;/listen 8080;/g' /etc/nginx/conf.d/default.conf
+CMD ["nginx","-g","daemon off;"]
+ENV PORT=8080
+EXPOSE 8080 
+#FIG
