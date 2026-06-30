@@ -16,7 +16,6 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: qa
 
     environment: ${{ github.ref_name }}
 
