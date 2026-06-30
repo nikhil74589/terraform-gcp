@@ -3,10 +3,8 @@ name: Deploy to Cloud Run
 on:
   push:
     branches:
-      - main
-      - dev
       - qa
-      - prod
+      
 
 
 permissions:
