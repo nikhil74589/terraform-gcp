@@ -8,6 +8,7 @@ on:
       - qa
       - prod
 
+
 permissions:
   contents: read
   id-token: write
@@ -15,7 +16,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: dev
+    environment: qa
 
     environment: ${{ github.ref_name }}
 
